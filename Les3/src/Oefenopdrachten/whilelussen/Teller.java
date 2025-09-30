@@ -11,7 +11,7 @@ public class Teller {
 
         int teller =0;
 
-        while (teller < 10) {
+        while (teller < 11) {
 
             System.out.println("Teller nieuwe waarde: "+teller);
             teller++;
