@@ -131,6 +131,7 @@ public class ListOefening {
         return clubCheck.toString();
     }
 
+    // Vraag 4: Kun je hetzelfde doen als hierboven, maar PSV moet dan laatste zijn.
     public static String sortClubsBis(List<String> clubCheck, String clubToCheck) {
         Collections.sort(clubCheck);
         int positie = clubCheck.indexOf(clubToCheck);
@@ -145,7 +146,7 @@ public class ListOefening {
 
 
 
-    // Vraag 4: Kun je hetzelfde doen als hierboven, maar PSV moet dan laatste zijn.
+
 
 
 }
