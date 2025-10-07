@@ -19,6 +19,20 @@ public class GeheimeCode {
         laResistanceMembers = addMembers(laResistanceMembers, "Sjaak");
         System.out.println("laResistanceMembers: "+laResistanceMembers);
 
+
+        System.out.println("--- Lijst van Leden ---");
+        System.out.println("Onversleuteld: " + laResistanceMembers);
+
+        // Opdracht 2: Versleutelen
+        List<String> versleuteld = encryptMembers(laResistanceMembers);
+        System.out.println("Versleuteld:   " + versleuteld);
+
+        // Opdracht 3: Ontsleutelen
+        List<String> ontsleuteld = decryptMembers(versleuteld);
+        System.out.println("Ontsleuteld:   " + ontsleuteld);
+        System.out.println("--- Controle ---");
+        System.out.println("Klopt de ontsleutelde lijst? " + laResistanceMembers.equals(ontsleuteld));
+
         /*
         Opdracht 1: Hierboven zijn via de methode addMembers, leden aan de lijst toegevoegd. Pas de Methode zo aan dat
          er alleen unieke namen in voor mogen komen.
@@ -41,22 +55,25 @@ public class GeheimeCode {
     }
 
     private static List<String> addMembers(List<String> members, String name) {
-        boolean foundMember =  false;
 
-        for (int i = 0; i < members.size(); i++) {
-            if(members.get(i).equals(name)) {
-                foundMember = true;
-                break;
-            }
-        }
-        if(!foundMember) {members.add(name);}
+//        boolean foundMember =  false;
+//        for (int i = 0; i < members.size(); i++) {
+//            if(members.get(i).equals(name)) {
+//                foundMember = true;
+//                break;
+//            }
+//        }
+//        if(!foundMember) {members.add(name);}
+//        return members;
 
-        return members;
+        // Eleganter
+        if (!members.contains(name)) {members.add(name);}return members;
     }
+
 
     private static List<String> encryptMembers(List<String> members){
-
+    return members;
     }
 
-    private static string decryptMembers(List<String> members){}
+    private static List<String> decryptMembers(List<String> members){return members;}
 }
