@@ -1,14 +1,18 @@
 public class DebugOefening {
     public static void main(String[] args) {
-        int getalA = 10;
-        int getalB = 3;
-        double resultaat = getalA / getalB + 0.1; // Lijn 6
+        int a = 10;
+        int b = 5;
 
-        // Bepaal de logische vlag
-        boolean vlag = (getalA > 5) || (getalA-- < 10); // Lijn 9
+        // LIJN 8: Methode-aanroep
+        int resultaat = berekenSom(a, b);
 
-        System.out.println("Resultaat: " + (resultaat * 10)); // Lijn 11
-        System.out.println("Vlag: " + vlag);
-        System.out.println("A: " + getalA);
+        System.out.println("Eindresultaat: " + resultaat); // LIJN 11
+    }
+
+    // De methode die we gaan 'Step Into'
+    public static int berekenSom(int x, int y) {
+        // LIJN 15
+        int som = x + y;
+        return som;
     }
 }
